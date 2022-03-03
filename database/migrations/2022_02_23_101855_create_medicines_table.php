@@ -17,11 +17,15 @@ class CreateMedicinesTable extends Migration
             $table->id();
             $table->string('generic_name');
             $table->string('formulas');
-            $table->string('restriction_formula');
-            $table->string('description');
-            $table->string('faskes_TK1');
-            $table->string('faskes_TK2');
-            $table->string('faskes_TK3');
+            $table->string('restriction_formula')->nullable();
+            $table->double('price',12,2);
+            $table->string('description')->nullable();
+            $table->boolean('faskes_TK1')->default(0);
+            $table->boolean('faskes_TK2')->default(0);
+            $table->boolean('faskes_TK3')->default(0);
+            $table->string('image');
+            
+            $table->timestamps();
         });
     }
 
