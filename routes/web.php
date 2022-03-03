@@ -38,3 +38,5 @@ Route::get('foo1', function() {
 Route::get('greeting', function() {
     return view('welcome', ['name' => 'Samantha']);
 });
+
+Route::resource('medicines','MedicineController');

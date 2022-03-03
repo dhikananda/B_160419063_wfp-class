@@ -65,7 +65,6 @@
     </head>
     <body>
         <!-- alternatif dari php echo -->
-        Hello, {{ $name }}
 
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
